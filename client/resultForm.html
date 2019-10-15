@@ -1,0 +1,19 @@
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+    <div class="row">
+        <input type="number" name="number1" ng-model="ctrl.number1" id="number1" class="form-control" placeholder="Enter First Number" ng-class="{errorColor: myForm.number1.$invalid}" positive required/>
+        <div ng-show=" myForm.number1.$dirty && myForm.number1.$error">
+            <div class="error" ng-show="myForm.number1.$error.positive && !myForm.number1.$error.required ">Only positive number is allowed.</div>
+            <div class="error" ng-show="myForm.number1.$error.required && !myForm.number1.$error.positive">Number1 is required field.</div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <input type="number" name="number2" ng-model="ctrl.number2" id="number2" class="form-control" placeholder="Enter Second Number" ng-class="{errorColor: myForm.number2.$invalid}" positive required/>
+        <div ng-show=" myForm.number2.$dirty && myForm.number2.$error">
+            <div class="error" ng-show="myForm.number2.$error.positive && !myForm.number2.$error.required ">Only positive number is allowed.</div>
+            <div class="error" ng-show="myForm.number2.$error.required && !myForm.number2.$error.positive">Number2 is required field.</div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid">Multiply</button>
+    </div>
+</form>

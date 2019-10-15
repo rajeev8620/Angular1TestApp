@@ -1,0 +1,56 @@
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Angular Testing App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller/appController.js"></script>
+    <script src="service/appService.js"></script>
+    <script src="directive/resultForm.js"></script>
+    <script src="directive/positiveDirective.js"></script>
+</head>
+<body>
+    <div class="container" ng-controller="AppController as ctrl">
+        <div class="card-group mt-4" style="border-radius: 13px;">
+            <div class="card">
+                <div class="card-header">
+                    <button ng-click="showAllProjectData=!showAllProjectData" class="btn btn-primary">Multiply Numbers</button>
+                </div>
+                <div class="card-body">
+                    <div ng-if="showAllProjectData">
+                        <div result-form></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-center">Latest Result Data</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Number1</th>
+                                <th>Number2</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="u in ctrl.latestRecors">
+                                <td><span ng-bind="u.Number1"></span></td>
+                                <td><span ng-bind="u.Number2"></span></td>
+                                <td><span ng-bind="u.Result"></span></td>
+                            </tr>
+                            <tr ng-show="ctrl.latestRecors==''">
+                                <td colspan="3">
+                                    <span style="margin-left: 30%;">No Data Found!</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+* {
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+body, html {
+   background:#e3e3e3;
+    font-family: Montserrat-Regular, sans-serif;
+}
+.error {color: brown;}
+.errorColor {
+    font-size: 17px;
+    color: red;
+  }
+   
