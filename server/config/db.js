@@ -2,9 +2,9 @@ var mysql = require('mysql');
 
 // Add the credentials to access your database
 var connection = mysql.createConnection({    
-    host: 'cs209.cwgblr.com',
+    host: 'localhost',
     user: 'root',
-    password: 'cellworks',
+    password: 'password',
     database: 'AngularTestApp'
 });
 
