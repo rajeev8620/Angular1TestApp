@@ -35,7 +35,7 @@ password:password
 To modify port number, need to go to config/config.js" and change port number, default it's calling port number:3000.
 
 To Run the server need to run the command "node app.js" in side root folder.
-For testing the server need to run "node test" command in side root folder.
+For testing the server need to run "npm test" command in side root folder.
 All testing code is there inside test folder.
 
 ======================CLIENT SETUP===============================
